@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 spring:
   application:
     name: cloud-payment-service
@@ -18,14 +18,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      # 单机注册中心配置
-      defaultZone: http://localhost:7001/eureka
-#      集群注册中心配置
-#      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
   instance:
-    instance-id: payment8001
+    instance-id: payment8002
     prefer-ip-address: true
-    # 心跳时间间隔
-    lease-renewal-interval-in-seconds: 8
-    # 告诉服务端超时等待时间上限，超过上限则剔除服务
-    lease-expiration-duration-in-seconds: 2

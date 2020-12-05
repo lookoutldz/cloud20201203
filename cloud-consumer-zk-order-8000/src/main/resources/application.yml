@@ -1,0 +1,18 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: cloud-order-service-zk
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cloud20201203?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+  cloud:
+    zookeeper:
+      connect-string: 47.115.38.255:2181
+
+mapper:
+  mappers:
+    - tk.mybatis.mapper.common.Mapper
+  notEmpty: true

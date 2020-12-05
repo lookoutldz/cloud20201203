@@ -1,23 +1,18 @@
-package org.example.cloud1203.controller;
+package org.example.cloud1205.controller;
 
 import io.swagger.annotations.Api;
-import lombok.extern.slf4j.Slf4j;
-import org.example.cloud1203.service.PaymentService;
+import org.example.cloud1205.service.PaymentService;
 import org.example.cloud1205.entity.CommonResult;
 import org.example.cloud1205.entity.Payment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
  * @author looko
  */
-@Slf4j
 @Api
 @RestController
 @RequestMapping("/payment")
@@ -28,9 +23,6 @@ public class PaymentController {
 
     @Autowired
     private PaymentService paymentService;
-
-    @Resource
-    private DiscoveryClient discoveryClient;
 
     @GetMapping("/{id}")
     private CommonResult<Payment> getById(@PathVariable Long id) {
@@ -72,18 +64,5 @@ public class PaymentController {
             result.setData(null);
         }
         return result;
-    }
-
-    @GetMapping("/discovery")
-    private Object getInfo() {
-        List<String> services = discoveryClient.getServices();
-        for (String service : services) {
-            log.info(service);
-        }
-        List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PAYMENT-SERVICE");
-        for (ServiceInstance instance : instances) {
-            log.info(instance.getUri() + "\t" + instance.getHost() + "\t" + instance.getPort() + "\t" + instance.getScheme() + "\t" + instance.getServiceId() + "\t" + instance.getInstanceId());
-        }
-        return null;
     }
 }

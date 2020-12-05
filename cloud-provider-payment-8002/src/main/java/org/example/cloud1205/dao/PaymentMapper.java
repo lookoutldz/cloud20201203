@@ -1,4 +1,4 @@
-package org.example.cloud1203.dao;
+package org.example.cloud1205.dao;
 
 import org.example.cloud1205.entity.Payment;
 import org.springframework.stereotype.Repository;
@@ -7,6 +7,6 @@ import tk.mybatis.mapper.common.Mapper;
 /**
  * @author looko
  */
-@Repository
+@Repository("paymentMapper")
 public interface PaymentMapper extends Mapper<Payment> {
 }

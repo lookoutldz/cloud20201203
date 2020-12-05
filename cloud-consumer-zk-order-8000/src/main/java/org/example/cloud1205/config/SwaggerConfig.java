@@ -1,4 +1,4 @@
-package org.example.cloud1203.config;
+package org.example.cloud1205.config;
 
 import io.swagger.annotations.Api;
 import org.springframework.context.annotation.Bean;
@@ -25,8 +25,6 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.OAS_30)
                 .apiInfo(apiInfo())
                 .select()
-                //.apis(RequestHandlerSelectors.withMethodAnnotation(ApiOperation.class))
-//                .apis(RequestHandlerSelectors.withMethodAnnotation(Operation.class))
                 .apis(RequestHandlerSelectors.withClassAnnotation(Api.class))
                 .paths(PathSelectors.any())
                 .build();

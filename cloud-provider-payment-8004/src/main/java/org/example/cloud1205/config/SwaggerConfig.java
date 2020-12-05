@@ -1,4 +1,4 @@
-package org.example.cloud1203.config;
+package org.example.cloud1205.config;
 
 import io.swagger.annotations.Api;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package org.example.cloud1203;
+package org.example.cloud1205;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,11 +8,11 @@ import tk.mybatis.spring.annotation.MapperScan;
 /**
  * @author looko
  */
-@EnableEurekaClient
-@MapperScan(basePackages = "org.example.cloud1203.dao")
 @SpringBootApplication
-public class CloudProviderPayment8001 {
+@EnableEurekaClient
+@MapperScan(basePackages = "org.example.cloud1205.dao")
+public class CloudProviderPayment8002 {
     public static void main(String[] args) {
-        SpringApplication.run(CloudProviderPayment8001.class, args);
+        SpringApplication.run(CloudProviderPayment8002.class, args);
     }
 }

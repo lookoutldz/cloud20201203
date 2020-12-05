@@ -1,8 +1,8 @@
-package org.example.cloud1203.controller;
+package org.example.cloud1205.controller;
 
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
-import org.example.cloud1203.service.PaymentService;
+import org.example.cloud1205.service.PaymentService;
 import org.example.cloud1205.entity.CommonResult;
 import org.example.cloud1205.entity.Payment;
 import org.springframework.beans.factory.annotation.Autowired;

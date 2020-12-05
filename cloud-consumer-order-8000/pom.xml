@@ -9,16 +9,16 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>cloud-provider-payment-8001</artifactId>
+    <artifactId>cloud-consumer-order-8000</artifactId>
 
     <dependencies>
-<!--        eureka-->
+        <!--        eureka-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
-<!--        spring-->
+        <!--        spring-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -28,7 +28,7 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
 
-<!--        database-->
+        <!--        database-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -39,20 +39,20 @@
             <version>2.1.5</version>
         </dependency>
 
-<!--        lombok-->
+        <!--        lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
 
-<!--        swagger-->
+        <!--        swagger-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-boot-starter</artifactId>
             <version>3.0.0</version>
         </dependency>
 
-        <!--        custom jar-->
+<!--        custom jar-->
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>cloud-api-common</artifactId>
